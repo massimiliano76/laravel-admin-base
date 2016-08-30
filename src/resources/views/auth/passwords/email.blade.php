@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('bytenet::layout')
 
 <!-- Main Content -->
 @section('content')
