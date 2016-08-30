@@ -1,7 +1,7 @@
 vendor/
 node_modules/
 
-# Laravel 5 & Lumen specific
+# Laravel 5 & Lumen specific (from GitHub)
 bootstrap/cache/
 #.env.*.php
 #.env.php
@@ -9,3 +9,8 @@ bootstrap/cache/
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
+
+/.idea
+/*.sublime-project
+/*.sublime-workspace
+
