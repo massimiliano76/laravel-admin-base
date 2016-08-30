@@ -31,3 +31,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 - Changed password functionalities
+
+## [0.1.1] - 2016-08-30
+
+### Added
+- Laravel workbench for Travis CI
