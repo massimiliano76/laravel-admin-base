@@ -1,0 +1,867 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"func",
+				"function"
+			],
+			[
+				"user",
+				"userID"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"ty",
+				"type	Attr"
+			],
+			[
+				"fun",
+				"fun	function …"
+			],
+			[
+				"funci",
+				"create_function"
+			],
+			[
+				"fa",
+				"factory"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Searching 934 files for \"You are here\"\n\nE:\\www\\specular\\includes\\view\\page_header.php:\n   70                          \n   71                          <ul class=\"page_parents pull-right\">\n   72:                             <li><?php _e(\"You are here\", \"codeless\"); ?>: </li>\n   73                              <li class=\"home\"><a href=\"<?php echo esc_url(home_url()) ?>\"><?php _e(\"Home\", \"codeless\"); ?></a></li>\n   74                              \n\n1 match in 1 file\nPosted by\n\nSearching 934 files for \"Posted by\"\n\nE:\\www\\specular\\includes\\view\\blog\\loop-grid.php:\n  144  \n  145                          <ul class=\"info\">\n  146:                             <li><i class=\"linecon-icon-user\"></i><?php _e('Posted by', 'codeless') ?> <?php echo get_the_author() ?></li>   \n  147                              <li><i class=\"linecon-icon-calendar\"></i><?php _e('On', 'codeless') ?> <?php echo get_the_date() ?></li>\n  148                              <?php if($cl_redata['post_like']): ?>                      \n  ...\n  161                      <h1><a href=\"<?php echo get_permalink() ?>\"><?php echo esc_html(get_the_title()) ?></a></h1>\n  162                      <ul class=\"info\">\n  163:                         <li><i class=\"linecon-icon-user\"></i><?php _e('Posted by', 'codeless') ?> <?php echo get_the_author() ?></li> \n  164                          <li><i class=\"linecon-icon-calendar\"></i><?php _e('On', 'codeless') ?> <?php echo get_the_date() ?></li>                           \n  165                      </ul>\n\nE:\\www\\specular\\includes\\view\\blog\\loop-index.php:\n  144                          <ul class=\"info\">\n  145                              <?php if($cl_redata['blog_info_author']): ?>\n  146:                             <li><i class=\"linecon-icon-user\"></i><?php _e('Posted by', 'codeless') ?> <?php echo get_the_author() ?></li> \n  147                              <?php endif; ?>\n  148                              <?php if($cl_redata['blog_info_date']): ?>  \n  ...\n  201                      <ul class=\"info\">\n  202                          <?php if($cl_redata['blog_info_author']): ?>\n  203:                         <li><i class=\"linecon-icon-user\"></i><?php _e('Posted by', 'codeless') ?> <?php echo get_the_author() ?></li> \n  204                          <?php endif; ?>\n  205                          <?php if($cl_redata['blog_info_date']): ?>\n\nE:\\www\\specular\\includes\\view\\blog\\loop-second-style.php:\n  139                          <ul class=\"info\">\n  140                              <?php if($cl_redata['blog_info_author']): ?>\n  141:                                 <li><i class=\"linecon-icon-user\"></i><?php _e('Posted by', 'codeless') ?> <?php echo get_the_author() ?></li>\n  142                              <?php endif; ?>\n  143                              <?php if($cl_redata['blog_info_date']): ?>   \n  ...\n  168                      <ul class=\"info\">\n  169                          <?php if($cl_redata['blog_info_author']): ?>\n  170:                             <li><i class=\"linecon-icon-user\"></i><?php _e('Posted by', 'codeless') ?> <?php echo get_the_author() ?></li> \n  171                          <?php endif; ?>\n  172                          <?php if($cl_redata['blog_info_date']): ?>\n\nE:\\www\\specular\\includes\\view\\blog\\single-fullscreen.php:\n   25  				<h1><?php echo esc_html($title) ?></h1>\n   26  				<ul class=\"info\">\n   27:                     <li><i class=\"linecon-icon-user\"></i><?php _e('Posted by', 'codeless') ?> <?php echo get_the_author() ?></li>   \n   28                      <li><i class=\"linecon-icon-calendar\"></i><?php _e('On', 'codeless') ?> <?php echo get_the_date() ?></li>                      \n   29                      <li><i class=\"icon-comment-o\"></i><?php echo $count ?> <?php _e('Comments', 'codeless') ?></li> \n\nE:\\www\\specular\\lang\\en.po:\n 4268  #: includes/view/blog/single-fullscreen.php:27 vc_templates/latest_blog.php:54\n 4269  #: vc_templates/recent_news.php:30\n 4270: msgid \"Posted by\"\n 4271  msgstr \"\"\n 4272  \n\nE:\\www\\specular\\vc_templates\\latest_blog.php:\n   57                                  $output .= '<h4><a href=\"'.esc_attr(get_permalink()).'\">'.esc_html(get_the_title()).'</a></h4>';\n   58                                  $output .= '<ul class=\"info\">';\n   59:                                     $output .= '<li><i class=\"linecon-icon-user\"></i>'.__('Posted by', 'codeless').' '.get_the_author().'</li>'; \n   60                                      $output .= '<li><i class=\"linecon-icon-calendar\"></i>'.__('On', 'codeless').' '.get_the_date().'</li>';   \n   61                                  $output .= '</ul>';\n   ..\n   83                                  $output .= '<h4><a href=\"'.esc_attr(get_permalink()).'\">'.esc_html(get_the_title()).'</a></h4>';\n   84                                  $output .= '<ul class=\"info\">';\n   85:                                     $output .= '<li><i class=\"linecon-icon-user\"></i>'.__('Posted by', 'codeless').' '.get_the_author().'</li>'; \n   86                                      $output .= '<li><i class=\"linecon-icon-calendar\"></i>'.__('On', 'codeless').' '.get_the_date().'</li>';   \n   87                                  $output .= '</ul>';\n\nE:\\www\\specular\\vc_templates\\recent_news.php:\n   35                              $output .= '<img src=\"'.esc_url(codeless_image_by_id(get_post_thumbnail_id(), 'blog', 'url')).'\" alt=\"\">';\n   36                              $output .= '<ul class=\"info\">';\n   37:                                 $output .= '<li><i class=\"linecon-icon-user\"></i>'.__('Posted by', 'codeless').' '.esc_html(get_the_author()).'</li>'; \n   38                                  $output .= '<li><i class=\"linecon-icon-calendar\"></i>'. __('On', 'codeless').' '.esc_html(get_the_date()).'</li>';                                                   \n   39                              $output .= '</ul>';\n\n11 matches across 7 files\n\n\nSearching 934 files for \"row-fluid comments_list\"\n\nE:\\www\\specular\\includes\\view\\blog\\comments.php:\n   13                          <h4 class=\"single_title\"><?php echo esc_html($count) ?> Comments</h4>\n   14                        \n   15:                         <div class=\"row-fluid comments_list\">\n   16                              \n   17                             <?php\n\n1 match in 1 file\n\n\nSearching 934 files for \"widget widget_most_popular\"\n\n0 matches\n\nSearching 934 files for \"widget_most_popular\"\n\nE:\\www\\specular\\style.css:\n 2682  .widget_twitter .with_avatar dd{margin-left:65px;}\n 2683  \n 2684: .widget_most_popular dt{\n 2685    width:60px;\n 2686    height:60px;\n 2687  }\n 2688  \n 2689: .widget_most_popular dd{\n 2690    margin-left:75px;\n 2691  }\n 2692: .widget_most_popular dl{\n 2693    margin:0;\n 2694  }\n 2695: .widget_most_popular li{\n 2696    margin-bottom:20px;\n 2697  }\n 2698: .widget_most_popular li:after{\n 2699    content:\"\";\n 2700    display:none;\n 2701  }\n 2702: .widget_most_popular li:last-child{\n 2703    margin-bottom:0;\n 2704  }\n 2705: .widget_most_popular .date{\n 2706    width:100%;\n 2707    float:left;\n ....\n 3997    margin-top:0\n 3998  }\n 3999: aside .widget_most_popular li{\n 4000    margin-bottom:0;\n 4001  }\n 4002: aside .widget_most_popular li a{\n 4003    color:#444;\n 4004  }\n\nE:\\www\\specular\\css\\bootstrap-responsive.css:\n 1245      padding-left:0;\n 1246    }\n 1247:   .widget_most_popular dd{\n 1248      margin-left:75px;\n 1249    }\n\nE:\\www\\specular\\includes\\widgets\\codeless_mostpopular.php:\n    7      function CodelessMostPopularWidget(){\n    8  \n    9:         $options = array('classname' => 'widget_most_popular', 'description' => 'Add a widget to show the most popular posts' );\n   10  \n   11: 		parent::__construct( 'widget_most_popular', THEMENAME.' Widget Popular Posts', $options );\n   12  \n   13      }\n\n12 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 7770,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/E/www/specular/includes/widgets/codeless_mostpopular.php",
+			"settings":
+			{
+				"buffer_size": 2938,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/www/specular/includes/view/blog/comments.php",
+			"settings":
+			{
+				"buffer_size": 2867,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/www/specular/includes/view/blog/loop-index.php",
+			"settings":
+			{
+				"buffer_size": 14291,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/www/specular/includes/view/blog/loop-grid.php",
+			"settings":
+			{
+				"buffer_size": 7143,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 288.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"xdebug",
+				"Xdebug: Breakpoint - Step Over"
+			],
+			[
+				"xdeb",
+				"Set Syntax: Xdebug"
+			],
+			[
+				"package con",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Toggle Comment"
+			],
+			[
+				"Sidebar",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"funct",
+				"Snippet: function …"
+			],
+			[
+				"functio",
+				"Snippet: function __construct"
+			],
+			[
+				"Snippet: func",
+				"Snippet: Function"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"plu",
+				"Plugin Development: Profile Events"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"Install Package Emmet",
+			"Install Package",
+			"exit",
+			"r",
+			"shutdown -r now",
+			"--help",
+			"restart --help",
+			"help",
+			"restart",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/www/specular",
+		"/E/www/specular/includes",
+		"/E/www/specular/includes/view",
+		"/E/www/specular/includes/widgets"
+	],
+	"file_history":
+	[
+		"/E/www/specular/includes/view/page_header.php",
+		"/E/www/laravelbackpack.app/httpdocs/config/app.php",
+		"/E/www/laravelbackpack.app/httpdocs/app/Http/routes.php",
+		"/E/www/laravelbackpack.app/httpdocs/.env",
+		"/E/www/laravelbackpack.app/httpdocs/vendor/backpack/base/src/BaseServiceProvider.php",
+		"/E/www/laravelbackpack.app/httpdocs/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/E/www/laravelbackpack.app/httpdocs/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/E/www/laravelbackpack.app/httpdocs/config/database.php",
+		"/C/Users/ZexBre/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/ZexBre/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/E/www/laravelbackpack.app/httpdocs/default.sublime-project",
+		"/C/Users/ZexBre/AppData/Roaming/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/C/Users/ZexBre/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/ZexBre/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Kernel.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/symfony/http-foundation/Session/Session.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Controllers/Admin/Cards/CardsController.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/routes.php",
+		"/E/www/bytenet1.app/httpdocs/public/index.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/cards/index.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/errors/503.blade.php",
+		"/E/www/bytenet1.app/httpdocs/.env",
+		"/E/www/bytenet1.app/httpdocs/config/session.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/include/flash.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/welcome.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/layouts/app.blade.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Middleware/MustBeAdministrator.php",
+		"/D/Desktop/Ponuda za  hosting Pierre Travel.pdf",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Http/Request.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Requests/Request.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastServiceProvider.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php",
+		"/E/www/bytenet1.app/httpdocs/.gitignore",
+		"/E/www/bytenet1.app/httpdocs/default.sublime-project",
+		"/E/www/bytenet1.app/httpdocs/.gitattributes",
+		"/E/www/bytenet1.app/httpdocs/app/Providers/RouteServiceProvider.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php",
+		"/E/www/bytenet1.app/httpdocs/app/Console/Kernel.php",
+		"/E/www/bytenet1.app/httpdocs/database/factories/ModelFactory.php",
+		"/E/www/bytenet1.app/httpdocs/config/app.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/ViewComposers/Admin/MenuViewComposer.php",
+		"/E/www/bytenet1.app/httpdocs/database/seeds/UsersTableSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/database/seeds/PostsTableSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/database/seeds/CardsTableSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/database/seeds/CardNotesTableSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Guard.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Middleware/VerifyCsrfToken.php",
+		"/E/www/bytenet1.app/httpdocs/node_modules/laravel-elixir/node_modules/watchify/node_modules/browserify/node_modules/JSONStream/index.js",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Auth/AuthenticationException.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Session/TokenMismatchException.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2016_07_26_125852_add_is_admin_to_users_table.php",
+		"/E/www/bytenet1.app/httpdocs/tests/ExampleTest.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/layouts/includes/navigation-menuLeft.blade.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/ViewComposers/Admin/MenuLeftViewComposer.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/ViewComposers/Admin",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/layouts/includes/navigation-menuTop.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/layouts/app.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/admin-bytenet1/base.scss",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/dashboard/dashboard.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/layouts/includes/navigationmenu.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/admin-bytenet1/components/Menu-left.scss",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Foundation/AliasLoader.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/composer/ClassLoader.php",
+		"/C/Users/ZexBre/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/ZexBre/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/E/www/bytenet1.app/httpdocs/bootstrap/autoload.php",
+		"/E/www/bytenet1.app/httpdocs/gulpfile.js",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/site-bytenet1.scss",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/admin-bytenet1.scss",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/app.scss",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/site-bytenet1/base.scss",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/site-bytenet1/app.scss",
+		"/E/www/bytenet1.app/httpdocs/public/css/site-bytenet1.css.map",
+		"/E/www/bytenet1.app/httpdocs/public/css/app.css.map",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/admin/app.scss",
+		"/E/www/bytenet1.app/httpdocs/public/css/app-bytenet1.css",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/site-bytenet1/components/Menu-left.scss",
+		"/E/www/bytenet1.app/httpdocs/app/helpers.php",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/site/components/FlashMessages.scss",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Controllers/Admin/DashboardController.php",
+		"/E/www/bytenet1.app/httpdocs/composer.json",
+		"/E/www/bytenet1.app/httpdocs/vendor/composer/autoload_classmap.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/Authorize.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Auth/Access/Gate.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Middleware/Authenticate.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Auth/Middleware/AuthenticateWithBasicAuth.php",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/admin-app.scss",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/cards/show.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/admin-menu-left.scss",
+		"/E/www/bytenet1.app/httpdocs/public/css/admin-app.css",
+		"/E/www/bytenet1.app/httpdocs/public/css/app.css",
+		"/E/www/bytenet1.app/httpdocs/public/css/admin/app.css",
+		"/E/www/bytenet1.app/httpdocs/resources/assets/sass/admin/menu-left.css",
+		"/E/www/bytenet1.app/httpdocs/public/build/css/app-aa3c9d985b.css",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Controllers/Admin/Cards/CardsNotesController.php",
+		"/E/www/bytenet1.app/httpdocs/app/Card.php",
+		"/E/www/bytenet1.app/httpdocs/app/CardNote.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/cards-notes/edit.blade.php",
+		"/E/www/bytenet1.app/httpdocs/config/mail.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2016_07_17_163136_create_card_notes_table.php",
+		"/E/www/bytenet1.app/httpdocs/database/seeds/DatabaseSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/composer/autoload_static.php",
+		"/E/www/bytenet1.app/httpdocs/database/CardNotesTableSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2016_07_17_154213_create_card_notes_table.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2016_07_17_160616_create_card_notes_table.php",
+		"/E/www/bytenet1.app/httpdocs/database/seeds/CardsNotesTableSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2016_07_15_150259_create_cards_notes_table.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/E/www/bytenet1.app/httpdocs/app/Note.php",
+		"/E/www/bytenet1.app/httpdocs/app/User.php",
+		"/E/www/bytenet1.app/httpdocs/database/seeds/-CardsTableSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/database/seeds/-CardsNotesTableSeeder.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Controllers/Auth/AuthController.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Foundation/Auth/User.php",
+		"/E/www/bytenet1.app/httpdocs/vendor/laravel/framework/src/Illuminate/Auth/Authenticatable.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/admin/layout.blade.php",
+		"/E/www/bytenet1.app/httpdocs/config/database.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2016_07_15_150259_create_notes_table.php",
+		"/C/Users/ZexBre/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Controllers/CardsNotesController.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/cards/index.blade.php",
+		"/E/www/bytenet1.app/httpdocs/resources/views/cards/show.blade.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2016_07_15_130822_create_notes_table.php",
+		"/E/www/bytenet1.app/httpdocs/database/migrations/2016_07_15_145637_create_cards_table.php",
+		"/E/www/bytenet1.app/httpdocs/app/Http/Controllers/CardsController.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"<project>",
+			"E:\\www\\bytenet1.app"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"DATE",
+			"widget_most_popular",
+			"widget widget_most_popular",
+			"row-fluid comments_list",
+			"<?php _e('Posted by', 'codeless') ?>",
+			"Posted by",
+			"You are here",
+			"skeleto",
+			"setupRoutes",
+			"ctrl+alt+f",
+			"ctrl+alt+s",
+			"reveal",
+			"key",
+			"keys",
+			"key",
+			"connection",
+			"ip",
+			"value1",
+			"key",
+			"get",
+			"});",
+			"    Route::get('cards', 'Cards\\CardsController@index');\n    Route::get('cards/{card}', 'Cards\\CardsController@show');\n\n    Route::post('cards/{card}/notes', 'Cards\\CardsNotesController@store')->name('card-notes');\n\n    Route::get('cards-notes/{note}/edit', 'Cards\\CardsNotesController@edit');\n    Route::patch('cards-notes/{note}', 'Cards\\CardsNotesController@update');\n    //Route::resource('posts', 'Posts\\PostsController');\n\n});\n",
+			"get",
+			"session",
+			"php",
+			"phps",
+			"php",
+			"phpsp",
+			"fa-btn",
+			"max_depth",
+			"xdebug",
+			"byte",
+			"helpers.php",
+			"flash",
+			".navbar",
+			"fa-btn",
+			"CardNotesTableSeeder",
+			"card_notes",
+			"name",
+			"');",
+			"Route::get('cards/1', 'CardsController@show');",
+			"xdebug_session_start",
+			"f5",
+			"use",
+			"user",
+			"str_random",
+			"timestampds",
+			"increments",
+			"');\n"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7770,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										236,
+										248
+									],
+									[
+										704,
+										713
+									],
+									[
+										1254,
+										1263
+									],
+									[
+										1777,
+										1786
+									],
+									[
+										2177,
+										2186
+									],
+									[
+										2636,
+										2645
+									],
+									[
+										3040,
+										3049
+									],
+									[
+										3438,
+										3447
+									],
+									[
+										3953,
+										3962
+									],
+									[
+										4341,
+										4350
+									],
+									[
+										4916,
+										4925
+									],
+									[
+										5530,
+										5539
+									],
+									[
+										6158,
+										6181
+									],
+									[
+										6494,
+										6513
+									],
+									[
+										6586,
+										6605
+									],
+									[
+										6654,
+										6673
+									],
+									[
+										6714,
+										6733
+									],
+									[
+										6784,
+										6803
+									],
+									[
+										6875,
+										6894
+									],
+									[
+										6953,
+										6972
+									],
+									[
+										7073,
+										7092
+									],
+									[
+										7146,
+										7165
+									],
+									[
+										7297,
+										7316
+									],
+									[
+										7526,
+										7545
+									],
+									[
+										7653,
+										7672
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								7402,
+								7402
+							]
+						],
+						"settings":
+						{
+							"default_dir": "E:\\www\\specular",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 5,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2145.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/www/specular/includes/widgets/codeless_mostpopular.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2938,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1490,
+								1490
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 439.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/E/www/specular/includes/view/blog/comments.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1131,
+								1131
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/E/www/specular/includes/view/blog/loop-index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4741,
+								4777
+							],
+							[
+								9263,
+								9299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2884.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/E/www/specular/includes/view/blog/loop-grid.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4898,
+								4898
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1862.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 164.0
+	},
+	"pinned_build_system": "",
+	"project": "default.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"session",
+				"vendor\\symfony\\http-foundation\\Session\\Session.php"
+			],
+			[
+				"routeserviceprovider",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php"
+			],
+			[
+				"kerne",
+				"app\\Http\\Kernel.php"
+			],
+			[
+				"verify",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php"
+			],
+			[
+				"index.blad",
+				"resources\\views\\cards\\index.blade.php"
+			],
+			[
+				"index.bla",
+				"resources\\views\\cards\\index.blade.php"
+			],
+			[
+				"cards/inde",
+				"resources\\views\\cards\\index.blade.php"
+			],
+			[
+				"sessiongu",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php"
+			],
+			[
+				"validator",
+				"vendor\\vlucas\\phpdotenv\\src\\Validator.php"
+			],
+			[
+				"authcon",
+				"app\\Http\\Controllers\\Auth\\AuthController.php"
+			],
+			[
+				"user",
+				"app\\User.php"
+			],
+			[
+				"auth/user",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\User.php"
+			],
+			[
+				"app",
+				"bootstrap\\app.php"
+			],
+			[
+				"app.",
+				"bootstrap\\app.php"
+			],
+			[
+				"router.php",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php"
+			],
+			[
+				"auth",
+				"config\\auth.php"
+			],
+			[
+				"midlewa",
+				"app\\Http\\Middleware\\Authenticate.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"17":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"18":
+				{
+					"group": 0,
+					"index": 1
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 321.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 3
+	}
+}

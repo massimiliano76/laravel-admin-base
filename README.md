@@ -1,4 +1,4 @@
-# LaravelAdminBase
+# ByteNet\LaravelAdminBase
 Laravel Admin's base package, which offers admin authentication and a blank admin panel
 
 # Base
@@ -20,23 +20,39 @@ Laravel AdminBase central package, which includes:
 
 ## Install
 
-Via Composer
+1) Run in your terminal:
 
 ``` bash
 $ composer require bytenet/laravel-admin-base
 ```
 
+2) Add the service providers in config/app.php:
+``` php
+ByteNet\LaravelAdminBase\BaseServiceProvider::class,
+```
+
+3) Then run a few commands in the terminal:
+``` bash
+$ rm -rf app/Http/Controllers/Auth
+$ php artisan vendor:publish --provider="ByteNet\LaravelAdminBase\BaseServiceProvider"
+$ php artisan migrate
+```
+
+4) [optional] Change values in config/bytenet/base.php to make the admin panel your own. Change menu color, project name, developer name etc.
+
 ## Usage 
 
-// TODO
-
-``` php
-// TODO
-```
+1. Register a new user at yourappname/admin/register
+2. Your admin panel will be available at yourappname/admin
+3. [optional] If you're building an admin panel, you should close the registration. In config/bytenet/base.php look for "registration_open" and change it to false.
 
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Todos
+
+// TODO
 
 ## Testing
 
@@ -63,7 +79,7 @@ If you discover any security related issues, please email zexbre1@gmail.com inst
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/vpre/bytenet/laravel-admin-base.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/bytenet/laravel-admin-base.svg?style=flat-square
 [ico-license]: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/ByteNet-Serbia/laravel-admin-base.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/bytenet/laravel-admin-base.svg?style=flat-square
