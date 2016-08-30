@@ -26,3 +26,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 - Moved all test controllers, views, config file, lang file for Laravel authentication into the package. Loading the package will allow the user to make use of Backpack authentication, instead of Laravel's default.
+
+## [0.1.0] - 2016-08-19
+
+### Added
+- Changed password functionalities

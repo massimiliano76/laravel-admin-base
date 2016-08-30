@@ -40,6 +40,18 @@ $ php artisan migrate
 
 4) [optional] Change values in config/bytenet/base.php to make the admin panel your own. Change menu color, project name, developer name etc.
 
+5) [optional] If you want to be able to use the Reset Password functionality, you need to specify to Laravel to use the ByteNet LaravelBaseAdmin email for this. At the end of your \config\auth.php file, change:
+``` php
+'passwords' => [
+        'users' => [
+            'provider' => 'users',
+            'email' => 'bytenet::auth.emails.password', // <--- change is here
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+    ],
+```
+
 ## Usage 
 
 1. Register a new user at yourappname/admin/register
