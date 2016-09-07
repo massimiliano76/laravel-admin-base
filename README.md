@@ -18,7 +18,7 @@ Laravel AdminBase central package, which includes:
 - admin-wide alerts system (notification bubbles); // TODO
 - roles / permissions; // TODO
 
-## Install
+## Install on Laravel 5.3
 
 1) Run in your terminal:
 
@@ -38,19 +38,23 @@ $ php artisan vendor:publish --provider="ByteNet\LaravelAdminBase\BaseServicePro
 $ php artisan migrate
 ```
 
-4) [optional] Change values in config/bytenet/base.php to make the admin panel your own. Change menu color, project name, developer name etc.
-
-5) [optional] If you want to be able to use the Reset Password functionality, you need to specify to Laravel to use the ByteNet LaravelBaseAdmin email for this. At the end of your \config\auth.php file, change:
+4) Make sure the reset password emails have the correct reset link by editing the adding these to your ```User``` model:
+- before class name ```use ByteNet\LaravelAdminBase\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;```
+- as a method inside the User class:
 ``` php
-'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'email' => 'bytenet::auth.emails.password', // <--- change is here
-            'table' => 'password_resets',
-            'expire' => 60,
-        ],
-    ],
+  /**
+   * Send the password reset notification.
+   *
+   * @param  string  $token
+   * @return void
+   */
+  public function sendPasswordResetNotification($token)
+  {
+      $this->notify(new ResetPasswordNotification($token));
+  }
 ```
+
+5) [optional] Change values in config/bytenet/base.php to make the admin panel your own. Change menu color, project name, developer name etc.
 
 ## Usage 
 

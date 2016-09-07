@@ -12,7 +12,7 @@ return [
     */
 
     // Project name. Shown in the breadcrumbs and a few other places.
-    'project_name' => 'ByteNET Travel',
+    'project_name' => config('app.name'),
 
     // Menu logos
     'logo_lg'   => '<strong>ByteNet</strong>Travel',

@@ -97,7 +97,7 @@
       <footer class="main-footer">
         @if (config('bytenet.base.show_powered_by'))
             <div class="pull-right hidden-xs">
-               {{ trans('bytenet::base.powered_by') }} <a target="_blank" href="https://github.com/ByteNet-Serbia/LaravelAdminBase">Laravel ByteNet</a>
+               {{ trans('bytenet::base.powered_by') }} <a target="_blank" href="https://github.com/ByteNet-Serbia/LaravelAdminBase">Lara BtNt</a>
             </div>
         @endif
         {{ trans('bytenet::base.handcrafted_by') }} <a target="_blank" href="{{ config('bytenet.base.developer_link') }}">{{ config('bytenet.base.developer_name') }}</a>.

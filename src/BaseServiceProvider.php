@@ -17,12 +17,17 @@ class BaseServiceProvider extends ServiceProvider
     {
         // LOAD THE VIEWS
         // - first the published views (in case they have any changes)
-        $this->loadViewsFrom(resource_path('views/vendor/bytenet/laravel-admin-base'), 'bytenet');
+        //$this->loadViewsFrom(resource_path('views/vendor/bytenet/laravel-admin-base'), 'bytenet');
+        // - then the stock views that come with the package, in case a published view might be missing
+        $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'bytenet');
 
+        // use the vendor translation file as fallback
         $this->loadTranslationsFrom(realpath(__DIR__.'/resources/lang'), 'bytenet');
+        
+        // use the vendor configuration file as fallback
+        $this->mergeConfigFrom( __DIR__.'/config/bytenet/base.php', 'bytenet.base');
 
-
-        $this->setupRoutes($this->app->router);
+        $this->map();
 
         // -------------
         // PUBLISH FILES
@@ -43,7 +48,10 @@ class BaseServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // register the current package
+        $this->app->bind('bytenet.admin.base', function ($app) {
+            return new Base($app);
+        });
     }
 
 
@@ -54,28 +62,44 @@ class BaseServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function setupRoutes(Router $router)
+    public function map()
     {
         // register the 'admin' middleware
-        $router->middleware('auth.bytenet', app\Http\Middleware\AuthenticateByteNet::class);
+        Route::middleware('bytenet.auth', app\Http\Middleware\ByteNetAuthenticate::class);
 
-        $router->group(['namespace' => 'ByteNet\LaravelAdminBase\app\Http\Controllers'], function ($router) {
-            Route::group(['middleware' => 'web', 'prefix' => config('bytenet.base.route_prefix')], function () {
+        $this->mapWebRoutes();
 
-                // if not otherwise configured, setup the auth routes
-                if (config('bytenet.base.setup_auth_routes')) {
-                    Route::auth();
-                }
+        $this->mapApiRoutes();
+    }
 
-                // if not otherwise configured, setup the dashboard routes
-                if (config('bytenet.base.setup_dashboard_routes')) {
-                    Route::get('dashboard', 'AdminController@dashboard');
-                    Route::get('/', function () {
-                        // The '/admin' route is not to be used as a page, because it breaks the menu's active state.
-                        return redirect(config('bytenet.base.route_prefix').'/dashboard');
-                    });
-                }
-            });
+
+    /**
+     * Define the "web" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapWebRoutes()
+    {
+        Route::group([
+            'middleware' => 'web',
+            'prefix' => config('bytenet.base.route_prefix'),
+            'namespace' => 'ByteNet\LaravelAdminBase\app\Http\Controllers',
+        ], function ($router) {
+            require __DIR__ . '/routes/web.php';
         });
+    }
+
+    /**
+     * Define the "api" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapApiRoutes()
+    {
+        //
     }
 }

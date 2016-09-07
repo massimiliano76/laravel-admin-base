@@ -3,7 +3,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | ByteNet\Base Language Lines
+    | Backpack\Base Language Lines
     |--------------------------------------------------------------------------
     */
     'registration_closed'  => 'Inscription fermée.',

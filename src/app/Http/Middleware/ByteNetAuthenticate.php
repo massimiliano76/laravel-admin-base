@@ -5,7 +5,7 @@ namespace ByteNet\LaravelAdminBase\app\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AuthenticateByteNet
+class ByteNetAuthenticate
 {
     /**
      * Handle an incoming request.
