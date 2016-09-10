@@ -9,7 +9,7 @@ return [
     */
 
     'registration_closed'  => 'Registracija nije dozvoljena.',
-    'first_page_you_see'   => 'Prva strana koju vidiš nakon logovanja',
+    'first_page_you_see'   => 'Prva strana koju vidite nakon logovanja',
     'login_status'         => 'Login status',
     'logged_in'            => 'Ulogovani ste!',
     'toggle_navigation'    => 'Isključi/uključi navigaciju',
@@ -17,9 +17,9 @@ return [
     'user'                 => 'KORISNIK',
     'logout'               => 'Odjava',
     'login'                => 'Prijava',
-    'register'             => 'Register',
+    'register'             => 'Registracija',
     'name'                 => 'Ime',
-    'email_address'        => 'E-Mail adresa',
+    'email_address'        => 'E-mail adresa',
     'password'             => 'Lozinka',
     'confirm_password'     => 'Potvrda lozinke',
     'remember_me'          => 'Zapamti me',

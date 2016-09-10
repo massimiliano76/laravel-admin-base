@@ -36,3 +36,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 - Laravel workbench for Travis CI
+
+## [0.1.2] - 2016-09-05
+
+### Added
+- Changed functionalities for Laravel 5.3

@@ -13,7 +13,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth.bytenet');
+        $this->middleware('bytenet.auth');
     }
 
     /**
@@ -23,8 +23,7 @@ class AdminController extends Controller
      */
     public function dashboard()
     {
-        //$this->data['title'] = trans('bytenet::base.dashboard'); // set the page title
-        $this->data['title'] = 'Dashboard';
+        $this->data['title'] = trans('bytenet::base.dashboard'); // set the page title
 
         return view('bytenet::dashboard', $this->data);
     }
