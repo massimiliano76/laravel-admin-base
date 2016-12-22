@@ -22,6 +22,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 
 
+## [0.1.2] - 2016-12-22
+
+### Fixed
+- Some cosmetic changes
+
 ## [0.0.1] - 2016-08-19
 
 ### Added
