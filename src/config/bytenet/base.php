@@ -15,11 +15,11 @@ return [
     'project_name' => config('app.name'),
 
     // Menu logos
-    'logo_lg'   => '<strong>ByteNet</strong>Travel',
-    'logo_mini' => '<strong>B</strong>T',
+    'logo_lg'   => '<strong>Byte Net</strong> Travel',
+    'logo_mini' => '<strong>BTNT</strong>',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'ByteNET',
+    'developer_name' => 'Byte Net',
 
     // Developer website. Link in footer.
     'developer_link' => 'http://bytenet.rs',
@@ -48,6 +48,7 @@ return [
     */
 
     'registration_open' => true,
+    'login_open' => true,
 
 
     /*
