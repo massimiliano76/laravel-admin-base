@@ -22,11 +22,6 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 
 
-## [0.1.2] - 2016-12-22
-
-### Fixed
-- Some cosmetic changes
-
 ## [0.0.1] - 2016-08-19
 
 ### Added
@@ -46,3 +41,13 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 - Changed functionalities for Laravel 5.3
+
+## [0.1.3] - 2016-12-22
+
+### Fixed
+- Some cosmetic changes
+
+## [0.1.4] - 2016-12-24
+
+### Added
+- AdminLTE support
