@@ -66,3 +66,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Fixed
 - AdminLTE bugfix 201612242120
+
+## [0.1.8] - 2016-12-24
+
+### Added
+- Make proper migrate files

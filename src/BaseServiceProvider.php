@@ -34,6 +34,8 @@ class BaseServiceProvider extends ServiceProvider
         // -------------
         // publish config file
         $this->publishes([__DIR__.'/config' => config_path()], 'config');
+        // publish migrations
+        $this->publishes([__DIR__.'/database/migrations' => database_path('migrations')], 'migrations');
         // publish lang files
         $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/vendor/bytenet')], 'lang');
 
