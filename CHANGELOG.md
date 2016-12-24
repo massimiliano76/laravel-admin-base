@@ -56,3 +56,13 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Fixed
 - AdminLTE bugfix 201612242100
+
+## [0.1.6] - 2016-12-24
+
+### Fixed
+- AdminLTE bugfix 201612242110
+
+## [0.1.7] - 2016-12-24
+
+### Fixed
+- AdminLTE bugfix 201612242120
