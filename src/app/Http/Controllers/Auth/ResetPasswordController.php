@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 
 class ResetPasswordController extends Controller
 {
-    protected $data = []; // the information we send to the view
     
     /*
     |--------------------------------------------------------------------------
@@ -23,7 +22,12 @@ class ResetPasswordController extends Controller
 
     use ResetsPasswords;
 
-    public $redirectTo;
+    /**
+     * Where to redirect users after resetting their password.
+     *
+     * @var string
+     */
+    protected $redirectTo;
 
     /**
      * Create a new controller instance.
@@ -51,10 +55,10 @@ class ResetPasswordController extends Controller
      */
     public function showResetForm(Request $request, $token = null)
     {
-        $this->data['title'] = trans('bytenet::base.reset_password'); // set the page title
+        $title = trans('bytenet::base.reset_password'); // set the page title
 
         return view('bytenet::auth.passwords.reset')->with(
-            ['token' => $token, 'email' => $request->email]
+            ['title' => $title, 'token' => $token, 'email' => $request->email]
         );
     }
 

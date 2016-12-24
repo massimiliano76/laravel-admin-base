@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    protected $data = []; // the information we send to the view
     
     /*
     |--------------------------------------------------------------------------
@@ -85,9 +84,9 @@ class RegisterController extends Controller
             abort(403, trans('bytenet::base.registration_closed'));
         }
         
-        $this->data['title'] = trans('bytenet::base.register'); // set the page title
+        $title = trans('bytenet::base.register'); // set the page title
 
-        return view('bytenet::auth.register');
+        return view('bytenet::auth.register', compact('title'));
     }
 
     /**

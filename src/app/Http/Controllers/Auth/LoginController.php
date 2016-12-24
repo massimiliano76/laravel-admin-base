@@ -7,7 +7,6 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-    protected $data = []; // the information we send to the view
     
     /*
     |--------------------------------------------------------------------------
@@ -50,8 +49,8 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        $this->data['title'] = trans('bytenet::base.login'); // set the page title
+        $title = trans('bytenet::base.login'); // set the page title
 
-        return view('bytenet::auth.login', $this->data);
+        return view('bytenet::auth.login', compact('title'));
     }
 }

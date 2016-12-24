@@ -9,7 +9,7 @@ return [
     */
 
     'registration_closed'  => 'Registracija nije dozvoljena.',
-    'first_page_you_see'   => 'Prva strana koju vidite nakon logovanja',
+    'first_page_you_see'   => 'Početna strana',
     'login_status'         => 'Login status',
     'logged_in'            => 'Ulogovani ste!',
     'toggle_navigation'    => 'Isključi/uključi navigaciju',

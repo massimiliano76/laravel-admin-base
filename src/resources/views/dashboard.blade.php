@@ -1,7 +1,6 @@
 @extends('bytenet::layout')
 
 @section('header')
-    <section class="content-header">
       <h1>
         {{ trans('bytenet::base.dashboard') }}<small>{{ trans('bytenet::base.first_page_you_see') }}</small>
       </h1>
@@ -9,7 +8,6 @@
         <li><a href="{{ url('admin') }}">{{ config('bytenet.base.project_name') }}</a></li>
         <li class="active">{{ trans('bytenet::base.dashboard') }}</li>
       </ol>
-    </section>
 @endsection
 
 
