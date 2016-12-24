@@ -116,7 +116,7 @@
                 <!-- The user image in the navbar-->
                 <img src="/backend/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
@@ -124,8 +124,8 @@
                     <img src="/backend/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                     <p>
-                        Alexander Pierce - Web Developer
-                        <small>Member since Nov. 2012</small>
+                        {{ Auth::user()->name }} - {{ Auth::user()->email }}
+                        <small>Member since {{ explode(' ', Auth::user()->created_at)[0] }}</small>
                     </p>
                 </li>
                 <!-- Menu Body -->
