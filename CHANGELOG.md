@@ -51,3 +51,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 - AdminLTE support
+
+## [0.1.5] - 2016-12-24
+
+### Fixed
+- AdminLTE bugfix 201612242100
