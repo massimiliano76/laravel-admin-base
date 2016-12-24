@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
-    protected $data = []; // the information we send to the view
 
     /**
      * Create a new controller instance.
@@ -23,8 +22,8 @@ class AdminController extends Controller
      */
     public function dashboard()
     {
-        $this->data['title'] = trans('bytenet::base.dashboard'); // set the page title
+        $title = trans('bytenet::base.dashboard'); // set the page title
 
-        return view('bytenet::dashboard', $this->data);
+        return view('bytenet::dashboard', compact('title'));
     }
 }

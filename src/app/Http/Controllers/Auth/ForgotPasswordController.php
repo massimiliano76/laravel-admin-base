@@ -7,7 +7,6 @@ use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller
 {
-    protected $data = []; // the information we send to the view
     
     /*
     |--------------------------------------------------------------------------
@@ -43,8 +42,8 @@ class ForgotPasswordController extends Controller
      */
     public function showLinkRequestForm()
     {
-        $this->data['title'] = trans('bytenet::base.reset_password'); // set the page title
+        $title = trans('bytenet::base.reset_password'); // set the page title
         
-        return view('bytenet::auth.passwords.email');
+        return view('bytenet::auth.passwords.email', compact('title'));
     }
 }

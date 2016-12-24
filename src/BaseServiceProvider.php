@@ -17,15 +17,15 @@ class BaseServiceProvider extends ServiceProvider
     {
         // LOAD THE VIEWS
         // - first the published views (in case they have any changes)
-        //$this->loadViewsFrom(resource_path('views/vendor/bytenet/laravel-admin-base'), 'bytenet');
+        $this->loadViewsFrom(resource_path('views/vendor/bytenet/laravel-admin-base'), 'bytenet');
         // - then the stock views that come with the package, in case a published view might be missing
-        $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'bytenet');
+        $this->loadViewsFrom(realpath(__DIR__ . '/resources/views'), 'bytenet');
 
         // use the vendor translation file as fallback
-        $this->loadTranslationsFrom(realpath(__DIR__.'/resources/lang'), 'bytenet');
+        $this->loadTranslationsFrom(realpath(__DIR__ . '/resources/lang'), 'bytenet');
         
         // use the vendor configuration file as fallback
-        $this->mergeConfigFrom( __DIR__.'/config/bytenet/base.php', 'bytenet.base');
+        $this->mergeConfigFrom( __DIR__ . '/config/bytenet/base.php', 'bytenet.base');
 
         $this->map();
 
@@ -86,6 +86,7 @@ class BaseServiceProvider extends ServiceProvider
             'middleware' => 'web',
             'prefix' => config('bytenet.base.route_prefix'),
             'namespace' => 'ByteNet\LaravelAdminBase\app\Http\Controllers',
+            'as' => config('bytenet.base.route_prefix').'::',
         ], function ($router) {
             require __DIR__ . '/routes/web.php';
         });
