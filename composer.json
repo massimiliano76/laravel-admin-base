@@ -13,9 +13,9 @@
     "authors": [
         {
             "name": "Nikola Zeravcic",
-            "email": "zexbre1@gmail.com",
+            "email": "office@bytenet.rs",
             "homepage": "http://www.bytenet.rs",
-            "role": "Chief Architect & Developer"
+            "role": "CEO, Chief Architect & Developer"
         }
     ],
     "require": {
@@ -26,7 +26,7 @@
         "almasaeed2010/AdminLTE": "^2.3"
     },
     "require-dev": {
-        "phpunit/phpunit" : "4.*"
+        "phpunit/phpunit" : "5.*"
     },
     "autoload": {
         "psr-4": {

@@ -25,7 +25,7 @@ class BaseServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(realpath(__DIR__ . '/resources/lang'), 'bytenet');
         
         // use the vendor configuration file as fallback
-        $this->mergeConfigFrom( __DIR__ . '/config/bytenet/base.php', 'bytenet.base');
+        $this->mergeConfigFrom(__DIR__ . '/config/bytenet/base.php', 'bytenet.base');
 
         $this->map();
 
@@ -40,7 +40,10 @@ class BaseServiceProvider extends ServiceProvider
         $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/vendor/bytenet')], 'lang');
 
         // publish views
-        $this->publishes([__DIR__.'/resources/views' => resource_path('views/vendor/bytenet/laravel-admin-base')], 'views');
+        $this->publishes(
+            [__DIR__.'/resources/views' => resource_path('views/vendor/bytenet/laravel-admin-base')],
+            'views'
+        );
     }
 
     /**

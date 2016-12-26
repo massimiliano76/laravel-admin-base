@@ -57,10 +57,11 @@ class ResetPasswordController extends Controller
     {
         $title = trans('bytenet::base.reset_password'); // set the page title
 
-        return view('bytenet::auth.passwords.reset')->with(
-            ['title' => $title, 'token' => $token, 'email' => $request->email]
-        );
+        return view('bytenet::auth.passwords.reset')->with([
+            'title' => $title,
+            'token' => $token,
+            'email' => $request->email,
+        ]);
     }
 
-    
 }

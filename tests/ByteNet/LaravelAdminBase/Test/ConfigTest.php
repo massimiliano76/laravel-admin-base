@@ -10,7 +10,7 @@ namespace ByteNet\LaravelAdminBase\Test;
 class ConfigTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     *  
+     * testAddPackagistRepository
      */
     public function testAddPackagistRepository()
     {

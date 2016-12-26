@@ -1,4 +1,4 @@
-<?php 
+<?php
 // if not otherwise configured, setup the auth routes
 if (config('bytenet.base.setup_auth_routes')) {
     Route::auth();
