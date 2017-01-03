@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - src/database/seeds/UsersTableSeeder.php
 
 ### Changed
+- src/BaseServiceProvider.php
 - .travis.yml
 
 ## [0.1.10] - 2016-12-26
