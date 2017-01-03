@@ -73,10 +73,10 @@ before_script:
 script:
   #script to setup the package for testing
   - ./vendor/bin/phpunit "./vendor/${COMPOSER_NAME}/$GITHUB_PACKAGE" #runs the phpunit just for your package
-  - php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__));'
-  - php -r 'echo file_get_contents("./.env");'
-  - php -r 'echo file_get_contents("./config/app.php");'
-  - php -r 'print_r(scandir(__DIR__ . "/vendor"));'
+  #- php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__));'
+  #- php -r 'echo file_get_contents("./.env");'
+  #- php -r 'echo file_get_contents("./config/app.php");'
+  #- php -r 'print_r(scandir(__DIR__ . "/vendor"));'
 
 notifications:
   email: false

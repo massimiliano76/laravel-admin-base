@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Added
 - src/database/seeds/UsersTableSeeder.php
 
+### Changed
+- .travis.yml
+
 ## [0.1.10] - 2016-12-26
 ### Added
 - .gitattributes file
@@ -62,7 +65,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Added
 - Moved all test controllers, views, config file, lang file for Laravel authentication into the package. Loading the package will allow the user to make use of Backpack authentication, instead of Laravel's default.
 
-[0.1.10]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.1.10...v0.1.11
+[0.1.11]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.1.10...v0.1.11
 [0.1.10]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.1.9...v0.1.10
 [0.1.9]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.1.8...v0.1.9
 [0.1.8]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.1.7...v0.1.8
