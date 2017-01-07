@@ -46,6 +46,12 @@ class BaseServiceProvider extends ServiceProvider
             [__DIR__.'/resources/views' => resource_path('views/vendor/bytenet/laravel-admin-base')],
             'views'
         );
+        // publish error views
+        $this->publishes([__DIR__.'/resources/views_errors' => resource_path('views/errors')], 'errors');
+        // publish public bytenet assets
+        $this->publishes([__DIR__.'/public' => public_path('vendor/bytenet')], 'public');
+        // publish public AdminLTE assets
+        $this->publishes([base_path('vendor/almasaeed2010/adminlte') => public_path('vendor/adminlte')], 'adminlte');
     }
 
     /**

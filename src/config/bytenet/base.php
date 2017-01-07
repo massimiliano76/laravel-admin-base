@@ -15,14 +15,14 @@ return [
     'project_name' => config('app.name'),
 
     // Menu logos
-    'logo_lg'   => '<strong>Byte Net</strong> Travel',
+    'logo_lg'   => '<strong>Byte Net</strong> CMS',
     'logo_mini' => '<strong>BTNT</strong>',
 
     // Developer or company name. Shown in footer.
     'developer_name' => 'Byte Net',
 
     // Developer website. Link in footer.
-    'developer_link' => 'http://bytenet.rs',
+    'developer_link' => '//bytenet.rs',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => true,
