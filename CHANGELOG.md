@@ -9,13 +9,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## [0.2.0] - 2017-01-07
 ### Added
 - src/public/bytenet.base.css
-
+- src/resources/views_errors/400.blade.php
+- src/resources/views_errors/401.blade.php
+- src/resources/views_errors/403.blade.php
+- src/resources/views_errors/404.blade.php
+- src/resources/views_errors/405.blade.php
+- src/resources/views_errors/408.blade.php
+- src/resources/views_errors/429.blade.php
+- src/resources/views_errors/500.blade.php
+- src/resources/views_errors/503.blade.php
 
 ### Changed
 - src/BaseServiceProvider.php
 - src/config/bytenet/base.php
 - src/resources/views/inc/sidebar.blade.php
-
+- src/resources/views/layout.blade.php
 
 ## [0.1.11] - 2017-01-03
 ### Added
