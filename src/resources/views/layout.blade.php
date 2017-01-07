@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     {{-- Encrypted CSRF token for Laravel, in order for Ajax requests to work --}}
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -13,23 +15,15 @@
     </title>
 
 
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
     @yield('before_styles')
 
 
-
-
-
-
     {{-- ***** BootstrapCDN.com - START ***** --}}
+    <!-- Bootstrap 3.3.7 -->
+        <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/bootstrap/css/bootstrap.min.css">
     <!-- Fonts -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
         <!-- Optional theme -->
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> --}}
@@ -41,12 +35,13 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/backend/adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect.
     -->
-    <link rel="stylesheet" href="/backend/adminlte/dist/css/skins/skin-blue.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/skins/skin-blue.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,20 +50,18 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
+    <!-- Bytenet Base CSS -->
+    <link rel="stylesheet" href="{{ asset('vendor/bytenet/bytenet.base.css') }}">
 
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet" type="text/css"> --}}
 
 
-    <!-- BackPack Base CSS -->
-
     @yield('after_styles')
 
-    
 
 </head>
 
-<!--
+{{--
 BODY TAG OPTIONS:
 =================
 Apply one or more of the following classes to get the
@@ -87,7 +80,7 @@ desired effect
 |               | sidebar-collapse                        |
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
--->
+ --}}
 
 <body class="hold-transition {{ config('bytenet.base.skin') }} sidebar-mini">
     <!-- Site wrapper -->
@@ -158,18 +151,20 @@ desired effect
     <!-- REQUIRED JS SCRIPTS -->
 
     <!-- jQuery 2.2.3 -->
-    <script src="/backend/adminlte/plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <!-- Bootstrap 3.3.6 -->
-    {{-- <script src="/backend/adminlte/bootstrap/js/bootstrap.min.js"></script> --}}
+    {{-- <script src="{{ asset('vendor/adminlte') }}/plugins/jQuery/jquery-2.2.3.min.js"></script> --}}
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    {{-- <script src="{{ asset('vendor/adminlte') }}/bootstrap/js/bootstrap.min.js"></script> --}}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- AdminLTE App -->
-    <script src="/backend/adminlte/dist/js/app.min.js"></script>
 
-    <!-- Optionally, you can add Slimscroll and FastClick plugins.
-         Both of these plugins are recommended to enhance the
-         user experience. Slimscroll is required when using the
-         fixed layout. -->
+    <!-- AdminLTE App -->
+    <script src="{{ asset('vendor/adminlte') }}/dist/js/app.min.js"></script>
+
+    {{-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. --}}
 
     @include('bytenet::inc.alerts')
 
