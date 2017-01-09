@@ -152,7 +152,8 @@ desired effect
 
     <!-- jQuery 2.2.3 -->
     {{-- <script src="{{ asset('vendor/adminlte') }}/plugins/jQuery/jquery-2.2.3.min.js"></script> --}}
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- Bootstrap 3.3.7 -->
     {{-- <script src="{{ asset('vendor/adminlte') }}/bootstrap/js/bootstrap.min.js"></script> --}}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
