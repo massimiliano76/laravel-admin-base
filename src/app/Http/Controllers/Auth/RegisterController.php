@@ -80,13 +80,13 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         // if registration is closed, deny access
-        if (! config('bytenet.base.registration_open')) {
-            abort(403, trans('bytenet::base.registration_closed'));
+        if (! config('bytenet.admin.base.registration_open')) {
+            abort(403, trans('bytenet-admin-base::base.registration_closed'));
         }
         
-        $title = trans('bytenet::base.register'); // set the page title
+        $title = trans('bytenet-admin-base::base.register'); // set the page title
 
-        return view('bytenet::auth.register', compact('title'));
+        return view('bytenet-admin-base::auth.register', compact('title'));
     }
 
     /**
@@ -98,8 +98,8 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         // if registration is closed, deny access
-        if (! config('bytenet.base.registration_open')) {
-            abort(403, trans('bytenet::base.registration_closed'));
+        if (! config('bytenet.admin.base.registration_open')) {
+            abort(403, trans('bytenet-admin-base::base.registration_closed'));
         }
 
         $this->validator($request->all())->validate();

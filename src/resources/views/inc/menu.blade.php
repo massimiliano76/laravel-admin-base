@@ -4,11 +4,11 @@
 
 
         @if (Auth::guest())
-            @if (config('bytenet.base.login_open'))
-                <li><a href="{{ url('/' . config('bytenet.base.route_prefix') . '/login') }}">{{ trans('bytenet::base.login') }}</a></li>
+            @if (config('bytenet.admin.base.login_open'))
+                <li><a href="{{ url('/' . config('bytenet.admin.base.route_prefix') . '/login') }}">{{ trans('bytenet-admin-base::base.login') }}</a></li>
             @endif
-            @if (config('bytenet.base.registration_open'))
-                <li><a href="{{ url('/' . config('bytenet.base.route_prefix') . '/register') }}">{{ trans('bytenet::base.register') }}</a></li>
+            @if (config('bytenet.admin.base.registration_open'))
+                <li><a href="{{ url('/' . config('bytenet.admin.base.route_prefix') . '/register') }}">{{ trans('bytenet-admin-base::base.register') }}</a></li>
             @endif
         @else
 
@@ -146,10 +146,10 @@
                 <!-- Menu Footer-->
                 <li class="user-footer">
                     <div class="pull-left">
-                        <a href="#" class="btn btn-default btn-flat">{{ trans('bytenet::base.user') }}</a>
+                        <a href="#" class="btn btn-default btn-flat">{{ trans('bytenet-admin-base::base.user') }}</a>
                     </div>
                     <div class="pull-right">
-                        <a href="{{ url('/' . config('bytenet.base.route_prefix') . '/logout') }}" class="btn btn-default btn-flat">{{ trans('bytenet::base.logout') }}</a>
+                        <a href="{{ url('/' . config('bytenet.admin.base.route_prefix') . '/logout') }}" class="btn btn-default btn-flat">{{ trans('bytenet-admin-base::base.logout') }}</a>
                     </div>
                 </li>
             </ul>

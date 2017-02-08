@@ -20,7 +20,7 @@ class ResetPasswordNotification extends ResetPassword
                 'You are receiving this email because we received a password reset request for your account.',
                 'Click the button below to reset your password:',
             ])
-            ->action('Reset Password', url(config('bytenet.base.route_prefix').'/password/reset', $this->token))
+            ->action('Reset Password', url(config('bytenet.admin.base.route_prefix').'/password/reset', $this->token))
             ->line('If you did not request a password reset, no further action is required.');
     }
 }

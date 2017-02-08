@@ -28,11 +28,11 @@
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-          <li class="header">{{ trans('bytenet::base.administration') }}</li>
+          <li class="header">{{ trans('bytenet-admin-base::base.administration') }}</li>
           <!-- ================================================ -->
           <!-- ==== Recommended place for admin menu items ==== -->
           <!-- ================================================ -->
-          <li><a href="{{ url('/' . config('bytenet.base.route_prefix') . '/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('bytenet::base.dashboard') }}</span></a></li>
+          <li><a href="{{ url('/' . config('bytenet.admin.base.route_prefix') . '/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('bytenet-admin-base::base.dashboard') }}</span></a></li>
 
 
 
