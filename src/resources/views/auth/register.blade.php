@@ -1,17 +1,17 @@
-@extends('bytenet::layout')
+@extends('bytenet-admin-base::layout')
 
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('bytenet::base.register') }}</div>
+                <div class="panel-heading">{{ trans('bytenet-admin-base::base.register') }}</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/' . config('bytenet.base.route_prefix') . '/register') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/' . config('bytenet.admin.base.route_prefix') . '/register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">{{ trans('bytenet::base.name') }}</label>
+                            <label for="name" class="col-md-4 control-label">{{ trans('bytenet-admin-base::base.name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">{{ trans('bytenet::base.email_address') }}</label>
+                            <label for="email" class="col-md-4 control-label">{{ trans('bytenet-admin-base::base.email_address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">{{ trans('bytenet::base.password') }}</label>
+                            <label for="password" class="col-md-4 control-label">{{ trans('bytenet-admin-base::base.password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label for="password-confirm" class="col-md-4 control-label">{{ trans('bytenet::base.confirm_password') }}</label>
+                            <label for="password-confirm" class="col-md-4 control-label">{{ trans('bytenet-admin-base::base.confirm_password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -69,7 +69,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ trans('bytenet::base.register') }}
+                                    {{ trans('bytenet-admin-base::base.register') }}
                                 </button>
                             </div>
                         </div>

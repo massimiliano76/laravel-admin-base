@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
         //DB::table('users')->truncate();
 
         //DB::table('users')->insert([
-        //    'name' => 'Byte Net',
+        //    'name' => 'Nikola Žeravčić',
         //    'email' => 'podrska@bytenet.rs',
         //    'password' => bcrypt('123456'),
         //    'remember_token' => str_random(10),
@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
         App\User::truncate();
 
         $user = new App\User;
-        $user->name = 'Byte Net';
+        $user->name = 'Nikola Žeravčić';
         $user->email ='podrska@bytenet.rs';
         $user->password = bcrypt('123456');
         $user->remember_token = str_random(10);

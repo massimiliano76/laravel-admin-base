@@ -1,4 +1,4 @@
-@extends('bytenet::layout')
+@extends('bytenet-admin-base::layout')
 
 <!-- Main Content -->
 @section('content')
@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('bytenet::base.reset_password') }}</div>
+                <div class="panel-heading">{{ trans('bytenet-admin-base::base.reset_password') }}</div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -14,11 +14,11 @@
                         </div>
                     @endif
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/' . config('bytenet.base.route_prefix') . '/password/email') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/' . config('bytenet.admin.base.route_prefix') . '/password/email') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">{{ trans('bytenet::base.email_address') }}</label>
+                            <label for="email" class="col-md-4 control-label">{{ trans('bytenet-admin-base::base.email_address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ trans('bytenet::base.send_reset_link') }}
+                                    {{ trans('bytenet-admin-base::base.send_reset_link') }}
                                 </button>
                             </div>
                         </div>

@@ -49,8 +49,8 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        $title = trans('bytenet::base.login'); // set the page title
+        $title = trans('bytenet-admin-base::base.login'); // set the page title
 
-        return view('bytenet::auth.login', compact('title'));
+        return view('bytenet-admin-base::auth.login', compact('title'));
     }
 }

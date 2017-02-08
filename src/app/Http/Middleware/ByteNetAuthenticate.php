@@ -22,7 +22,7 @@ class ByteNetAuthenticate
                 return response('Unauthorized.', 401);
             }
 
-            return redirect()->guest(config('bytenet.base.route_prefix') . '/login');
+            return redirect()->guest(config('bytenet.admin.base.route_prefix') . '/login');
         }
 
         return $next($request);

@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Look & feel customizations
+    | ByteNet\LaravelAdminBase customizations
     |--------------------------------------------------------------------------
     |
     | Make it yours.
@@ -76,5 +76,4 @@ return [
 
     // Fully qualified namespace of the User model
     'user_model_fqn' => '\App\User',
-
 ];

@@ -15,17 +15,26 @@ class BaseServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //\DB::listen(function ($query) {
+        //    echo "<div style='border: 1px solid red; background: #fbc8c8; display: inline-block'>"
+        //        . var_dump($query->sql, $query->bindings)
+        //        . "</div>";
+        //});
+
         // LOAD THE VIEWS
         // - first the published views (in case they have any changes)
-        $this->loadViewsFrom(resource_path('views/vendor/bytenet/laravel-admin-base'), 'bytenet');
+        $this->loadViewsFrom(resource_path('views/vendor/bytenet/laravel-admin-base'), 'bytenet-admin-base');
         // - then the stock views that come with the package, in case a published view might be missing
-        $this->loadViewsFrom(realpath(__DIR__ . '/resources/views'), 'bytenet');
+        $this->loadViewsFrom(realpath(__DIR__ . '/resources/views'), 'bytenet-admin-base');
 
         // use the vendor translation file as fallback
-        $this->loadTranslationsFrom(realpath(__DIR__ . '/resources/lang'), 'bytenet');
+        $this->loadTranslationsFrom(realpath(__DIR__ . '/resources/lang'), 'bytenet-admin-base');
+
+        // load migrations
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
         
         // use the vendor configuration file as fallback
-        $this->mergeConfigFrom(__DIR__ . '/config/bytenet/base.php', 'bytenet.base');
+        $this->mergeConfigFrom(__DIR__ . '/config/bytenet/admin/base.php', 'bytenet.admin.base');
 
         $this->map();
 
@@ -34,12 +43,10 @@ class BaseServiceProvider extends ServiceProvider
         // -------------
         // publish config file
         $this->publishes([__DIR__.'/config' => config_path()], 'config');
-        // publish migrations
-        $this->publishes([__DIR__.'/database/migrations' => database_path('migrations')], 'migrations');
-        // publish seed
-        $this->publishes([__DIR__.'/database/seeds' => database_path('seeds')], 'seeds');
         // publish lang files
-        $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/vendor/bytenet')], 'lang');
+        $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/vendor/bytenet-admin-base')], 'lang');
+        // publish database seeds
+        $this->publishes([__DIR__.'/database/seeds' => database_path('seeds')], 'seeds');
 
         // publish views
         $this->publishes(
@@ -62,9 +69,9 @@ class BaseServiceProvider extends ServiceProvider
     public function register()
     {
         // register the current package
-        $this->app->bind('bytenet.admin.base', function ($app) {
-            return new Base($app);
-        });
+        //$this->app->bind('bytenet.admin.base', function ($app) {
+        //    return new Base($app);
+        //});
     }
 
 
@@ -78,7 +85,8 @@ class BaseServiceProvider extends ServiceProvider
     public function map()
     {
         // register the 'admin' middleware
-        Route::middleware('bytenet.auth', app\Http\Middleware\ByteNetAuthenticate::class);
+        //Route::middleware('bytenet.auth', app\Http\Middleware\ByteNetAuthenticate::class); // Laravel 5.3
+        Route::aliasMiddleware('bytenet.auth', app\Http\Middleware\ByteNetAuthenticate::class);
 
         $this->mapWebRoutes();
 
@@ -95,14 +103,7 @@ class BaseServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Route::group([
-            'middleware' => 'web',
-            'prefix' => config('bytenet.base.route_prefix'),
-            'namespace' => 'ByteNet\LaravelAdminBase\app\Http\Controllers',
-            'as' => config('bytenet.base.route_prefix').'::',
-        ], function ($router) {
-            require __DIR__ . '/routes/web.php';
-        });
+        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
     }
 
     /**
