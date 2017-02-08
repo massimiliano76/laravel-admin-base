@@ -74,7 +74,6 @@ class BaseServiceProvider extends ServiceProvider
         //});
     }
 
-
     /**
      * Define the routes for the application.
      *
@@ -92,7 +91,6 @@ class BaseServiceProvider extends ServiceProvider
 
         $this->mapApiRoutes();
     }
-
 
     /**
      * Define the "web" routes for the application.
