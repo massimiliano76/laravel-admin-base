@@ -53,7 +53,7 @@
         <!-- Settings tab content -->
         <div class="tab-pane" id="control-sidebar-settings-tab">
             <form method="post">
-                <h3 class="control-sidebar-heading">General Settings</h3>
+                <h3 class="control-sidebar-heading">{{ ucfirst(trans('bytenet-admin-base::base.general_settings')) }}</h3>
 
                 <div class="form-group">
                     <label class="control-sidebar-subheading">

@@ -42,8 +42,8 @@ class ForgotPasswordController extends Controller
      */
     public function showLinkRequestForm()
     {
-        $title = trans('bytenet::base.reset_password'); // set the page title
+        $title = trans('bytenet-admin-base::base.reset_password'); // set the page title
         
-        return view('bytenet::auth.passwords.email', compact('title'));
+        return view('bytenet-admin-base::auth.passwords.email', compact('title'));
     }
 }

@@ -22,8 +22,8 @@ class AdminController extends Controller
      */
     public function dashboard()
     {
-        $title = trans('bytenet::base.dashboard'); // set the page title
+        $title = trans('bytenet-admin-base::base.dashboard'); // set the page title
 
-        return view('bytenet::dashboard', compact('title'));
+        return view('bytenet-admin-base::dashboard', compact('title'));
     }
 }

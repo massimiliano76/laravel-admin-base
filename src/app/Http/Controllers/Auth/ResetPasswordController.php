@@ -36,7 +36,7 @@ class ResetPasswordController extends Controller
      */
     public function __construct()
     {
-        $this->redirectTo = config('bytenet.base.route_prefix');
+        $this->redirectTo = config('bytenet.admin.base.route_prefix');
         $this->middleware('guest');
     }
 
@@ -55,13 +55,12 @@ class ResetPasswordController extends Controller
      */
     public function showResetForm(Request $request, $token = null)
     {
-        $title = trans('bytenet::base.reset_password'); // set the page title
+        $title = trans('bytenet-admin-base::base.reset_password'); // set the page title
 
-        return view('bytenet::auth.passwords.reset')->with([
+        return view('bytenet-admin-base::auth.passwords.reset')->with([
             'title' => $title,
             'token' => $token,
             'email' => $request->email,
         ]);
     }
-
 }
