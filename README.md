@@ -18,7 +18,7 @@ Laravel AdminBase central package, which includes:
 - admin-wide alerts system (notification bubbles); // TODO
 - roles / permissions; // TODO
 
-## Install on Laravel 5.3
+## Install on Laravel 5.4
 
 1) Run in your terminal:
 
