@@ -5,7 +5,7 @@ All Notable changes to `bytenet\laravel-admin-base` project will be documented i
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased] - 2017-02-09
+## [0.4.0] - 2017-02-09
 ### Added
 - src/app/Support/helpers.php
 
@@ -143,7 +143,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Added
 - Moved all test controllers, views, config file, lang file for Laravel authentication into the package. Loading the package will allow the user to make use of Backpack authentication, instead of Laravel's default.
 
-[Unreleased]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.3.0...HEAD
+[0.4.0]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.1.11...v0.2.0
 [0.1.11]: https://github.com/ByteNet-Serbia/laravel-admin-base/compare/v0.1.10...v0.1.11
